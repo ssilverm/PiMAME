@@ -1,0 +1,116 @@
+
+2010-07-20 Veghead (veg@fatsquirrel.org)
+	* Fix bug with downloading files with a space in the name reported by Richard Geoffrion (thanks again)
+
+2010-06-03 Veghead (veg@fatsquirrel.org)
+	* Add check.php
+	* Make config.php override defaults in config-core.php
+	* Remove updateconf.pl - no longer needed
+
+2010-04-10 Veghead (veg@fatsquirrel.org)
+	* Fix dl.php
+	* Fix mime_type/icon_type etc
+	* Allow direct download of files if curl support exists.
+
+2010-04-08 Veghead (veg@fatsquirrel.org)
+	* Revive corpse of Oliver.
+	* Switch to SVN.
+	* Attempt to remove all reliance on short tags.
+	* Attempt to remove all notices/warning/errors.
+	* PHP5/HTML5 support.
+	* Add vfs superclass.
+	* Add session object to encapsulate what were previously global variables.
+	* Demoronise swathes of existing code.
+
+2006-01-14 Veghead (veg@fatsquirrel.org)
+	* Added Turkish translation from engingem@gmail.com.
+	* Add option to workaround problems with certain FTP servers
+	  eg Solaris, where paths in pathnames cause problems. See 
+	  config-dist for more details.
+	* Fix updateconf.pl so that it actually seems to work.
+
+2005-06-26 Veghead (veg@fatsquirrel.org)
+	* Replaced Japanese translation with one from Tadashi Jokagi.
+	* Only logs initial logins, not every time a page is viewed.
+
+2005-06-23 Veghead (veg@fatsquirrel.org)
+	* Added Czech translation from Alois Andrysek <lojza@andrysek.net>
+	* Added logging support (file and syslog) based 
+	  on suggestions from Alois
+	* Added "direct linking" to allow simple publishing of URLs to content
+
+2005-05-27 Veghead (veg@fatsquirrel.org)
+	* Added Bulgarian language support thanks to Stoyan Troshanow!
+
+2005-05-09 Veghead (veg@fatsquirrel.org)
+	* Added Japanese language support thanks to Machiko Shikano
+	* Added updateconf.pl to help with upgrades
+
+2005-01-09 Veghead (veg@fatsquirrel.org)
+	* Session timeouts. See config.php for setting
+	* Fixed bug with filenames starting with spaces
+	* Added a warning if ftp_sessions isn't writable
+
+2004-11-24 Veghead (veg@fatsquirrel.org)
+	* More E-NOTICE fixes
+	* Case-insensitive filename icons (doh!)
+
+2004-11-24 Veghead (veg@fatsquirrel.org)
+        * Added Dutch language support thanks to martijn AT mmoret.com
+	* Added new config option to disable chmod features
+	* Fixed warnings about undefined indices
+
+2004-07-26 Andreas (pillath@users.sourceforge.net)
+        * more NLS stuff 
+
+2004-07-23 Veghead  (veg@fatsquirrel.org)
+	* Implemented a 'veto filenames' config option to hide 
+	  detritus.
+
+2004-07-12  Veghead  (veg@fatsquirrel.org)
+	* Implemented suggestion by Andreas Pillath <pillath At ise-online.com>
+	  to replace the existing, bloody awful, file download code with 
+	  something less crap that doesn't eat up all of PHP's memory.
+
+	* New config option 'lang_ask'. If set to true will allow the user
+	  to choose their preferred language upon login.
+
+	* Replaced German translation by one provided by Andreas Pillath.
+
+2004-06-12  Veghead  (veg@fatsquirrel.org)
+	* French translation added Maucourt Sylvain sylvain.maucourt at free.fr
+
+2004-06-09  Veghead  (veg@fatsquirrel.org)
+	* German translation added by peter at bikerpete.de (thanks!)
+
+	* Set permissions to display as <tt> for consistent width
+
+2004-06-07  Veghead  (veg@fatsquirrel.org)
+	* Stupid bugfix. Thanks to Jason Hoover, file uploads are now
+	  a tad more secure, and the ftp_cache directory doesn't keep on
+	  growing indefinitely....doh!
+
+2004-05-04  Veghead  (veg@fatsquirrel.org)
+	* Renamed to 'Oliver' due to request from some other 'WebShare' 
+	  people.
+
+	* Jose Carlos <psabs@psabs.com> supplied Portugese Brazil 
+	  translation.
+
+	* Added 'ftp_passive' as a config option to control whether active 
+	  or passive mode is attempted.
+
+2004-01-24  Veghead  (veg@fatsquirrel.org)
+
+	* Made the file icons links to the files, but with 
+	  application/octet-stream as the MIME type. I'm hoping that this
+	  will effectively provide a "download" option. It does in Mozilla,
+	  but not being someone who enjoys the pain of IE I don't know.
+	  Feedback anyone ?
+
+	* Fixed some totally stupid code that should make the whole 
+	  thing more compatible with other FTP servers. Certainly seems to
+	  work ok with PureFTPd now anyway.
+
+
+# vim:noexpandtab

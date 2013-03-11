@@ -1,0 +1,48 @@
+Quick and dirty install instructions
+------------------------------------
+
+Unpack the distribution somewhere accessible by your web server:
+
+	gzip -dc oliver-x.xx.tgz | tar xvf - 
+
+
+You need a directory for uploaded files. They must 
+be writable by the webserver, but not readable! The simplest, but least 
+secure method of doing this is:
+
+	chmod 777 ftp_cache
+
+The .htaccess files in the directory should protect the contents,
+but only if you have htaccess files enabled in your apache config!
+
+If you wish to upload files you have to set certain php.ini values:
+
+    file_uploads=1
+    upload_max_filesize=200M
+
+The best, and most secure solution is to read and understand the 
+documentation for your web server and operating system.
+
+You can create a file called 'motd.php' which will be included into the login 
+page - here you can put messages, instructions etc.
+
+It's probably a good idea to regularly run something to delete old entries
+from ftp_cache.
+
+Next, copy config-dist.php to config.php:
+    cp config-dist.php config.php
+
+Uncomment and change any settings you think you will need. These settings override the defaults in config-core.php.
+
+Finally, point your browser to check.php on the webserver where Oliver is installed.
+
+    e.g.
+        https://yourserver.com/oliver/check.php
+
+It will check your installation for some basic misconfiguration errors.
+
+er...that's it.
+
+Edit the style sheet, the header, loginform, and footer to customise the look 
+and feel. Of course this then makes upgrades more tricky. Any ideas ?
+

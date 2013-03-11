@@ -1,0 +1,38 @@
+$Id: README 23 2010-06-03 13:32:34Z veghead $
+
+Oliver v1.3.0
+(formerly Webshare)
+http://www.fatsquirrel.org/software/oliver/
+Copyright Veghead <veg@fatsquirrel.org> 2003-2010
+See file COPYING for licensing details
+
+Oliver is a PHP front end to FTP. It is intended to allow people 
+to access files, normally only available via FTP, using a web browser. 
+Despite the existence of many similar projects, notably Gollem 
+<http://horde.org/>, it was created to fulfill specific requirements:
+
+* Small and Simple 
+  This isn't trying to compete with powerful systems like Gollem. It is 
+  really only intended to be a functional skeleton for end-users to use and
+  customize. The code should be well commented and easy to understand.
+* Javascript optional
+  There are bits of javascript here, but they're all optional. A lot of
+  effort has gone into avoiding javascript here - I wonder if it was worth
+  it ? 
+* Fast
+  Speed is essential and considered more important than features. This is 
+  supposed to be usable. If you want bells and whistles you're probably 
+  in the wrong place.
+* Secure as possible
+  Don't laugh! OK the very essence of this concept is insecure, 
+  however it should be as secure as possible in the circumstances. 
+  Using Oliver instead of FTP should improve the security of your file store.
+
+Webshare is still a fair way from achieving these goals at present but 
+nonetheless usable and reasonably functional.
+Webshare was originally based on FCG FTP CLIENT By Tiago Luz 
+<tiago@spammer.com.br> and Gollem <http://www.horde.org/> however nearly 
+all of the FCG code has been replaced.
+
+An extraordinary amount of thanks are due to Richard Geoffrion for superhuman levels of patience, encouragement, support and QA.
+

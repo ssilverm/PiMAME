@@ -1,0 +1,203 @@
+Readme
+CrashTest's Screenshots Collection for Mame, version 0.102
+http://crashtest.retrogames.com
+2005/11/15
+
+1/ About
+
+This file is part of CrashTest's Screenshots Collection for Mame.
+(the Official Multiple Arcade Machine Emulator site @ http://www.mame.net/)
+Screenshots taken in-game, showing the title, select (if any), versus (if any),
+wallpapers and hardware of all games emulated by Mame.
+
+I don't make shots just to get pictures of games. I don't "run, shoot, quit".
+I play the games until I think I know it, and then
+I take a shot to make me a souvenir, and I share theses souvenirs.
+I reshoot games after their emulation is improved.
+I don't reshoot games if their emulation is temporarily getting worse.
+
+- How to use
+Move the zips to your favorite frontend directory.
+Most frontends can use them zipped.
+You might want to browse them yourself as most frontends
+are unable to show more than one file per romset.
+Example :
+move snap.zip in your Mame32 snap\ subdirectory,
+and you should see shots in the snap tab.
+do the same with titles.zip in titles\ subdirectory
+
+Recommended frontends are :
+AdvanceMENU @ http://advancemame.sourceforge.net/
+EasyMame @ http://www.mameworld.net/easymame/easymame.html
+EmuLoader @ http://www.mameworld.net/emuloader/
+ArcadeOS @ http://www.mameworld.net/pc2jamma/frontend.html
+
+2/ Modifications
+
+Some shots are modified under certain conditions :
+
+- Half resolution
+some games are obviously running in "half resolution".
+Shots have a ratio of 8/3 whereas the used screen is 4/3.
+If the height is doubled, the shot looks normal.
+These shots are pixel-doubled.
+It doesn't lose any information, and gives a better look.
+
+- Multi-Screen games
+some hardware uses an extra screen, typically for bios information,
+or dual player gaming (but each screen shows the same game.)
+These shots are focusing on the game itself.
+In that case, the picture is cropped to show only one screen of gaming.
+
+3/ Not Working
+
+If a romset is not working correctly,
+then the title shot shows as close as possible to the title.
+if it's not even booting, then an empty shot is used for the title shot.
+if it's booting and crashing/hanging, the title will be shot "as far as possible".
+
+if the game is not playable, even if it's possible to see what in-game would look like 
+(typically, due to protection), an empty shot is used for the in-game shot.
+I want to show what's playable. In-game is not Attract mode.
+
+If the title screen is reachable but emulation is likely to improve,
+and the game runs very slowly,
+I sometimes insert a coin to go faster, knowing it will be reshot in next version.
+
+4/ Details
+
+- In-game
+Surely the most important shot. instant view of the game, the graphics, the era...
+In-game shots are snapped while playing, in action, usually with a Dualshock,
+screenshot key mapped to R2, so it's taken while playing
+(it really makes a difference on fast action games).
+
+- Title
+Information
+the game logo is usually made of the game name in a graphical form. (the logo can be a different text).
+the name of the game can appear several times (in a logo form or not).
+The typical title screen is usually made of the logo, taking an important part of the game screen,
+the company name, the copyright, the year. It is usually shown at the end of the introduction.
+
+the name of the game can appear on boot screen. That would make a boot shot, not a title shot.
+The logo is usually not on the boot screen.
+if there are several possibilities, the Title shot should be carrying the logo.
+If the logo is appearing at several moment, there are several reasons to choose the right moment :
+If possible :
+- the logo shouldn't take the whole screen (that could be a wallpaper shot, not a title shot). Ex : Killer Instinct.
+- the logo shouldn't be surrounded by too much text information.
+
+Title shots are taken without a coin being inserted,
+except when inserting a coin is the only way to see the title (Last Blade 2, Subroc 3D).
+
+- WallPapers
+Used for frontend and take a glance
+wallpapers shots are typically showing a picture during introduction or the end. 
+Not an in-game shot nor title, usually a picture taking most of the screen, with no text.
+Layers are removed via the emulator to make wallpapers look better.
+
+- Hardware
+Hardware screen are just showing Hardware bios logo, when possible.
+
+- Clones
+every clone has an in-game and title shot.
+In-game shots are done at different moments to give a better overview of the clone family.
+Select shots are done for clones only if they are different.
+
+- Select
+Select shots are done when there is something to select, like Track, Team, Vehicle, Player.
+It should show hidden options (bosses in fighters, hidden tracks in racing games....).
+For quiz games, it shows the category of questions. 
+
+- Artwork
+if a romset has a bezel or backdrop available, and it's not compulsory to have it to be able to play,
+all non artwork shots are shot without it.
+if a romset has an overlay available, then the non artwork shots are shot with it.
+if a romset has artwork available, all non artwork shots are shot with artwork cropped.
+
+so : 
+in most case, non artwork shots are shot with overlay, artwork cropped.
+if it's required by the gaming, non artwork shots are shot with backdrop and/or bezels. (for example : Armor Attack, Frogs, Warrior, Night Driver)
+
+If something according to these rules has removed some artwork
+(area cropped, bezels not shot), then an "artwork" shot is done.
+an Artwork shot is a title shot with all pieces of artwork available activated, and no artwork cropping.
+If the title is hiding the artwork (like Discs of Tron), then an in-game shot is done instead.
+
+if a romset has some piece artwork available and required by the gaming,
+it will be visible on shots.
+(you can't play that game if you didn't download artworks.
+This artwork is a part of the game, not an extra0)
+Artwork shot = everything activated, if not visible already in in-game or title. 
+(it's meant to show you what you missed if you didn't download artworks and if it's not shown elsewhere)
+
+- Alternate shots
+All titles are shot, all sub games are shot.
+Alternate select screens are shot (for example, you select your car, then your track).
+
+5/ Naming convention :
+
+<romset>*.png is a picture taken from the romset.
+
+<romset>.png is compulsory, except when it's a sub game compilation and there is no in-game.
+
+<romset>[_<sub game_number>][-<shot_number>].png
+
+<romset>-<shot_number> means alternate screenshot.
+<romset>_<sub game_number> means sub game
+shot_number > 0
+sub game_number > 0
+
+so all three sub games in 3 wonders are 3wonder_1 / 2 / 3
+and alternate titles for Photo Y2K will be photoy2k-1.png 2 3 ...
+so alternate title of sub games would be
+<romset>_<subgamenumber>-[<shot_number>].
+
+Examples :
+if a game has 2 titles or 2 in-game shots, they will be named
+<romset>.png and (<romset>-.png or <romset>-1.png)
+if the romset has sub games with a title (namco classics, 3 wonders,
+capcom sports club...), each sub game number will be the same for
+titles, select, in-game
+so csclub_1 will always refer to the same game
+
+6/ Easy opinion
+
+Anyone can make a screenshot. 
+Emulators are free.
+It only takes a few seconds to take a screenshot.
+(insert another easy fact here)
+
+So your (insert negative adjective here) screenshot collection
+is (insert an even more negative adjective here) !
+
+Even if it would only take you a few seconds to take every screenshot, 
+then it will take at least one week to shot all of them. 
+Moreover :
+- I run and shot every romset, every clone, 
+  independently (I don't take a shot of the parent's title and copy it to clones)
+- I shoot clones at different moment. typically : 
+   parent is shot at level 1, 1st clone at 1st boss, 2nd clone at level 2 ...
+- Some games takes long to boot, long to understand, even longer to master.
+- I reshoot them if emulation has been improved or 
+if I estimate the shot can be improved. For example, if it doesn't gives a good sample of the game:
+typically, it happens when I come to play the game a lot, I'll make new screenshots that shows hidden bonus, warp zone...
+
+7/ Distribution
+
+In September 2004 these shots were recompressed and repacked.
+Until now, in-game and titles were released in separate update archives.
+now all shots are in one update archive.
+This update archives are gathered in packs of 10~15 Mb.
+Uploaded on newsgroups, and downloadable on my web site as well as mirrors.
+Check my web page for up to date information : http://crashtest.retrogames.com
+
+8/ Personal
+
+Don't hesitate mailing if you think a screenshot is wrong.
+My email is Cr?shT?st@r?tr?g?mes.c?m
+
+I regret I can't make good in-game screenshots for >2 players games.
+
+Ange 'CrashTest' Albertini
+2000-2005
