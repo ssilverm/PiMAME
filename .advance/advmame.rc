@@ -335,4 +335,4 @@ input_map[p1_doubleright_down] keyboard[1,scan0] or keyboard[0,f]
 input_map[p1_doubleright_right] keyboard[1,scan0] or keyboard[0,g]
 input_map[p1_doubleright_left] keyboard[1,scan0] or keyboard[0,d]
 input_map[ui_cancel] keyboard[1,scan0] keyboard[1,scan0] or keyboard[0,1] keyboard[0,2] or keyboard[0,esc] or keyboard[1,scan0]
-device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60
+
