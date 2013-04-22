@@ -23,12 +23,13 @@ menu_data = {
   'title': "PiMAME Menu", 'type': MENU, 'subtitle': "Please select an option...",
   'options': [
     { 'title': "AdvanceMAME", 'type': COMMAND, 'command': 'advmenu' },
-    { 'title': "EmulationStation / RetroPie (experimental)", 'type': COMMAND, 'command': 'emulationstation' },
+    { 'title': "Neo Geo (GNGeo)", 'type': COMMAND, 'command': 'gngeo -i roms/' },
+    { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
     { 'title': "Install PIP (http://pip.sheacob.com/about.html)", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py' },
     { 'title': "Remove PIP", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py -r' },
-    { 'title': "Edit AdvanceMAME Config", 'type': COMMAND, 'command': 'nano ~/.advance/advmame.rc' },    
     { 'title': "raspi-config", 'type': COMMAND, 'command': 'sudo raspi-config' },
     { 'title': "Reboot", 'type': COMMAND, 'command': 'sudo reboot' },
+    { 'title': "Shutdown", 'type': COMMAND, 'command': 'sudo poweroff' },
   ]
 }
 
