@@ -1,0 +1,139 @@
+# GNGEO Sample resource file
+
+# Path to dynamicly load opengl (only used for the opengl blitter)
+libglpath /usr/lib/libGL.so
+
+# Where your rom are?
+rompath /home/pi/roms
+
+# Where did you put yout neogeo.zip bios file?
+biospath /home/pi/roms
+
+# Where gngeo can find its datafile (font/skin/etc.)
+#datafile /usr/games/lib/gngeo/gngeo_data.zip
+datafile /usr/local/share/gngeo/gngeo_data.zip
+# Play in fullscreen?
+fullscreen true
+
+# Which blitter? 'gngeo --blitter help' for a list
+# soft
+# opengl
+# yuv
+blitter soft
+
+# Which effect? 'gngeo --effect help' for a list
+# none	
+# scanline
+# scanline50
+# scale2x
+# scale2x50
+# scale2x75
+# doublex
+# sai
+# supersai
+# eagle
+effect none
+
+# Enable the raster interrupt?
+raster false
+
+# scale the output image 
+scale 1
+
+# Have interpolation?
+interpolation false
+
+# Have sound?
+sound true
+
+# Shown FPS
+showfps false
+
+# autoframeskip control
+autoframeskip true
+sleepidle false
+
+# Synchronise the display with VBLANK (you may desactiva autoframeskip if vsync is on)
+vsync false
+
+# enable joystick support ?
+joystick true
+
+# enable the 68k inline debuger? (disable the sound)
+debug false
+
+# Use hardware surface for the screen?
+hwsurface false
+
+# Use PAL timing? (buggy)
+pal false
+
+# Sample rate
+samplerate 22050
+
+# country?
+# japan, usa, europe
+country usa
+
+# system type? arcade or home or unibios (unibios.rom needed)
+system arcade
+
+# NeoRageX-style hotkey configuration
+# Up to 4 hotkeys per player can be defined (
+# Only fire buttons (A-D) can be combined
+# A = 1, B = 2, C = 4, D = 8
+
+# Samples:
+# Map CD to P1 hotkey 0
+p1hotkey0 4,8
+# Map BC to P1 hotkey 1
+p1hotkey1 2,4
+#Map ABC to P1 hotkey 2
+p1hotkey2 1,2,4
+#p1hotkey3
+#p2hotkey0
+#p2hotkey1
+#p2hotkey2
+#p2hotkey3
+
+# Key configuration
+# order : A,B,C,D,START,COIN,UP,DOWN,LEFT,RIGHT
+# please see SDL_keysym.h for key definition
+# or push F4 during game : the keysym code of
+# keys will be printed (also work for joysticks) 
+# same thing as joypads for hotkeys
+
+
+# Azerty configuration: 
+# p1: w,x,q,s,&,",up,down,left,right
+# p2: l,m,o,p,é,',NUM 8,NUM 5,NUM 4,NUM 6
+#p1key    119,120,113,115,38,34,273,274,276,275
+#p2key    108,109,111,112,233,39,264,261,260,262
+
+#p1control A=K119,B=K120,C=K113,D=K115,START=K38,COIN=K34,UP=K273,DOWN=K274,LEFT=K276,RIGHT=K275,MENU=K27
+#p2control A=K108,B=K109,C=K111,D=K112,START=K233,COIN=K39,UP=K264,DOWN=K261,LEFT=K260,RIGHT=K262,MENU=K27
+
+# Qwerty configuration:
+# p1: z,x,a,s,1,3,up,down,left,right
+# p2: l,;,o,p,2,4,NUM 8,NUM 5,NUM 4,NUM 6
+#p1control A=K122,B=K120,C=K97,D=K115,START=K49,COIN=K51,UP=K273,DOWN=K274,LEFT=K276,RIGHT=K275,MENU=K27
+#p2control A=K108,B=K59,C=K111,D=K112,START=K50,COIN=K52,UP=K264,DOWN=K261,LEFT=K260,RIGHT=K262,MENU=K27
+
+#Testing TankStick control
+p1control A=K122,B=K120,C=K97,D=K115,START=K49,COIN=K51,UP=K273,DOWN=K274,LEFT=K276,RIGHT=K275,MENU=K27,A=K65505,B=K65507,C=K65513,D=K32,START=K49,COIN=K97,UP=K264,DOWN=K261,LEFT=K260,RIGHT=K262,MENU=K27
+
+
+# some sample joystick configuration
+# Xbox360
+# p1control A=J0B0,B=J0B1,C=J0B2,D=J0B3,START=J0B6,COIN=J0B10,UP=J0a1,DOWN=J0a1,LEFT=J0A0,RIGHT=J0A0,MENU=J0B7
+# Dualshock2
+# p1control A=J0B2,B=J0B1,C=J0B3,D=J0B0,START=J0B9,COIN=J0B8,UP=J0a1,DOWN=J0a1,LEFT=J0A0,RIGHT=J0A0
+
+# Meaning of the code:
+# Kxxx : keyboad key number xxx
+# JxByy : Joystick number x Button 
+# JxAyy : Joystick number x Axe yy (use a lowercase 'a' if you need to invert the axis)
+# JxHyy : Joystick number x Hat yy
+# 
+# by the way, you can define a button multiple time, for example A=J0B0,A=K123,etc..
+
