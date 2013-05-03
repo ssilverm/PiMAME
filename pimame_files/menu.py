@@ -4,12 +4,26 @@
 # The rest of the work was done by Matthew Bennett and he requests you keep these two mentions when you reuse the code :-)
 # Basic code refactoring by Andrew Scheller
 
+import subprocesses
 import curses, os #curses is the interface for capturing key presses on the menu, os launches the files
 screen = curses.initscr() #initializes a new window for capturing key presses
 curses.noecho() # Disables automatic echoing of key presses (prevents program from input each key twice)
 curses.cbreak() # Disables line buffering (runs each key as it is pressed rather than waiting for the return key to pressed)
 curses.start_color() # Lets you use colors when highlighting selected menu option
 screen.keypad(1) # Capture input from keypad
+
+wlan = subprocess.check_output("/sbin/ifconfig wlan0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}' ", shell=True)
+ether = subprocess.check_output("/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}' ", shell=True)
+
+myip = ''
+if wlan != '':
+  myip += wlan
+if ether != '':
+  myip += ' ' + ether
+
+if myip != '':
+  myip = "Your IP is: " + myip + " - "
+
 
 # Change this to use different colors when highlighting
 curses.init_pair(1,curses.COLOR_BLACK, curses.COLOR_WHITE) # Sets up color pair #1, it does black text with white background 
@@ -20,7 +34,7 @@ MENU = "menu"
 COMMAND = "command"
 
 menu_data = {
-  'title': "PiMAME Menu", 'type': MENU, 'subtitle': "Please select an option...",
+  'title': "PiMAME Menu", 'type': MENU, 'subtitle': myip + "Please select an option...",
   'options': [
     { 'title': "AdvanceMAME", 'type': COMMAND, 'command': 'advmenu' },
     { 'title': "Neo Geo (GNGeo)", 'type': COMMAND, 'command': 'gngeo -i roms/' },
