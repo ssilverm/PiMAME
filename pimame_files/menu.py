@@ -4,7 +4,7 @@
 # The rest of the work was done by Matthew Bennett and he requests you keep these two mentions when you reuse the code :-)
 # Basic code refactoring by Andrew Scheller
 
-import subprocesses
+import subprocess
 import curses, os #curses is the interface for capturing key presses on the menu, os launches the files
 screen = curses.initscr() #initializes a new window for capturing key presses
 curses.noecho() # Disables automatic echoing of key presses (prevents program from input each key twice)
@@ -34,18 +34,21 @@ MENU = "menu"
 COMMAND = "command"
 
 menu_data = {
-  'title': "PiMAME Menu", 'type': MENU, 'subtitle': myip + "Please select an option...",
+  'title': "PiMAME Menu", 'type': MENU, 'subtitle':  "Please select an option...",
   'options': [
     { 'title': "AdvanceMAME", 'type': COMMAND, 'command': 'advmenu' },
     { 'title': "Neo Geo (GNGeo)", 'type': COMMAND, 'command': 'gngeo -i roms/' },
     { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
     { 'title': "MAME4All", 'type': COMMAND, 'command': '/home/pi/emulators/mame4all-pi/mame' },
     { 'title': "SNES", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
-    { 'title': "Install PIP (http://pip.sheacob.com/about.html)", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py' },
-    { 'title': "Remove PIP", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py -r' },
-    { 'title': "raspi-config", 'type': COMMAND, 'command': 'sudo raspi-config' },
-    { 'title': "Reboot", 'type': COMMAND, 'command': 'sudo reboot' },
-    { 'title': "Shutdown", 'type': COMMAND, 'command': 'sudo poweroff' },
+    { 'title': "Tools", 'type': MENU, 'subtitle': myip,
+    'options': [
+      { 'title': "Install PIP (http://pip.sheacob.com/about.html)", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py' },
+      { 'title': "Remove PIP", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py -r' },
+      { 'title': "raspi-config", 'type': COMMAND, 'command': 'sudo raspi-config' },
+      { 'title': "Reboot", 'type': COMMAND, 'command': 'sudo reboot' },
+      { 'title': "Shutdown", 'type': COMMAND, 'command': 'sudo poweroff' },
+    }
   ]
 }
 
