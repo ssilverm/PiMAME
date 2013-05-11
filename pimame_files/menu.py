@@ -39,6 +39,8 @@ menu_data = {
     { 'title': "AdvanceMAME", 'type': COMMAND, 'command': 'advmenu' },
     { 'title': "Neo Geo (GNGeo)", 'type': COMMAND, 'command': 'gngeo -i roms/' },
     { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
+    { 'title': "MAME4All", 'type': COMMAND, 'command': '/home/pi/emulators/mame4all-pi/mame' },
+    { 'title': "SNES", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
     { 'title': "Install PIP (http://pip.sheacob.com/about.html)", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py' },
     { 'title': "Remove PIP", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py -r' },
     { 'title': "raspi-config", 'type': COMMAND, 'command': 'sudo raspi-config' },
