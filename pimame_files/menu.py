@@ -48,7 +48,8 @@ menu_data = {
       { 'title': "raspi-config", 'type': COMMAND, 'command': 'sudo raspi-config' },
       { 'title': "Reboot", 'type': COMMAND, 'command': 'sudo reboot' },
       { 'title': "Shutdown", 'type': COMMAND, 'command': 'sudo poweroff' },
-    }
+     ]
+    },
   ]
 }
 
