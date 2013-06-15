@@ -37,8 +37,7 @@ display_orientation
 display_restoreatexit yes
 display_restoreatgame yes
 display_size 1024
-emulator "dgen" generic "/home/pi/emulators/dgen/dgen" "%p"
-emulator_roms "dgen" "/home/pi/roms/genesis"
+emulator "advmess" advmess "advmess" ""
 event_alpha yes
 event_assign up up or 8_pad
 event_assign down down or 2_pad
