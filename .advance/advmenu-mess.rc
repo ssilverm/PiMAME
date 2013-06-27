@@ -38,7 +38,6 @@ display_restoreatexit yes
 display_restoreatgame yes
 display_size 1024
 emulator "advmess" advmess "advmess" ""
-emulator_roms "advmess" "/home/pi/roms"
 event_alpha yes
 event_assign up up or 8_pad
 event_assign down down or 2_pad
