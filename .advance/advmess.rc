@@ -1,3 +1,4 @@
+device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60
 debug_crash no
 debug_rawsound no
 debug_speedmark no
