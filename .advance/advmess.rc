@@ -40,7 +40,7 @@ dir_image /home/pi/.advance/image:/usr/local/share/advance/image
 dir_inp /home/pi/.advance/inp
 dir_memcard /home/pi/.advance/memcard
 dir_nvram /home/pi/.advance/nvram
-dir_rom /home/pi/.advance/rom:/usr/local/share/advance/rom:/home/pi/rom
+dir_rom /home/pi/.advance/rom:/home/pi/roms
 dir_sample /home/pi/.advance/sample:/usr/local/share/advance/sample
 dir_snap /home/pi/.advance/snap
 dir_sta /home/pi/.advance/sta
