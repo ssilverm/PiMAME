@@ -45,7 +45,7 @@ menu_data = {
     'options': [
       { 'title': "AdvanceMESS", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mess.rc' },
       { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
-      { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cavestory_rpi-master/nx' },
+      { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
      ]
     },
     { 'title': "Tools", 'type': MENU, 'subtitle': myip,
