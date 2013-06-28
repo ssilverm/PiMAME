@@ -43,7 +43,7 @@ menu_data = {
     { 'title': "SNES (PiSNES / SNES9x)", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
     { 'title': "More", 'type': MENU, 'subtitle': "blah",
     'options': [
-      { 'title': "AdvanceMESS", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mess.rc' },
+      #{ 'title': "AdvanceMESS", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mess.rc' },
       { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
       { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
      ]
