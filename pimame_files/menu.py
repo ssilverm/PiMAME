@@ -36,18 +36,22 @@ COMMAND = "command"
 menu_data = {
   'title': "PiMAME Menu", 'type': MENU, 'subtitle':  "Please select an option...",
   'options': [
-    { 'title': "AdvanceMAME", 'type': COMMAND, 'command': 'advmenu' },
-    { 'title': "Neo Geo (GNGeo)", 'type': COMMAND, 'command': 'gngeo -i roms/' },
-    { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
-    { 'title': "MAME4All", 'type': COMMAND, 'command': '/home/pi/emulators/mame4all-pi/mame' },
-    { 'title': "SNES (PiSNES / SNES9x)", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
-    { 'title': "More", 'type': MENU, 'subtitle': "blah",
+    { 'title': "Arcade", 'type': MENU, 'subtitle': "Arcade Emulators",
     'options': [
-      #{ 'title': "AdvanceMESS", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mess.rc' },
-      { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
-      { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
+      { 'title': "AdvanceMAME", 'type': COMMAND, 'command': 'advmenu' },
+      { 'title': "Neo Geo (GNGeo)", 'type': COMMAND, 'command': 'gngeo -i roms/' },
+      { 'title': "MAME4All", 'type': COMMAND, 'command': '/home/pi/emulators/mame4all-pi/mame' },
      ]
     },
+    { 'title': "Consoles", 'type': MENU, 'subtitle': "Console Emulators",
+    'options': [
+      #{ 'title': "AdvanceMESS", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mess.rc' },
+      { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
+      { 'title': "SNES (PiSNES / SNES9x)", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
+      { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
+     ]
+    },
+    { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
     { 'title': "Tools", 'type': MENU, 'subtitle': myip,
     'options': [
       { 'title': "Install PIP (http://pip.sheacob.com/about.html)", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py' },
