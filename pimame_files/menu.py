@@ -47,8 +47,8 @@ menu_data = {
     'options': [
       #{ 'title': "AdvanceMESS", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mess.rc' },
       { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
-      { 'title': "SNES (PiSNES / SNES9x)", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
       { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
+      { 'title': "SNES (PiSNES / SNES9x)", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
      ]
     },
     { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
