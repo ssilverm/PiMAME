@@ -33,6 +33,7 @@ n = curses.A_NORMAL #n is the coloring for a non highlighted menu option
 MENU = "menu"
 COMMAND = "command"
 
+
 menu_data = {
   'title': "PiMAME Menu", 'type': MENU, 'subtitle':  "Please select an option...",
   'options': [
@@ -45,10 +46,10 @@ menu_data = {
     },
     { 'title': "Consoles", 'type': MENU, 'subtitle': "Console Emulators",
     'options': [
-      #{ 'title': "AdvanceMESS", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mess.rc' },
       { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
       { 'title': "SNES (PiSNES / SNES9x)", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
       { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
+      { 'title': "Atari 2600 (Stella)", 'type': COMMAND, 'command': 'stella' },
      ]
     },
     { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
