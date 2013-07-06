@@ -1,5 +1,5 @@
 config save_at_exit
-device_alsa_device default
+device_alsa_device none
 device_alsa_mixer channel
 device_color_bgr15 yes
 device_color_bgr16 yes
