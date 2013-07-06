@@ -48,7 +48,7 @@ menu_data = {
     'options': [
       { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
       { 'title': "SNES (PiSNES / SNES9x)", 'type': COMMAND, 'command': '/home/pi/emulators/pisnes/snes9x.gui' },
-      { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
+      #{ 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
       { 'title': "Atari 2600 (Stella)", 'type': COMMAND, 'command': 'stella' },
      ]
     },
