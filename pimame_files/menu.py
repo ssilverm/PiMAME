@@ -48,10 +48,12 @@ menu_data = {
     'options': [
       { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
       { 'title': "SNES (PiSNES / SNES9x Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-snes.rc' },
+      { 'title': "Gameboy (Gearboy Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-gameboy.rc' },
       { 'title': "Atari 2600 (Stella)", 'type': COMMAND, 'command': 'stella' },
      ]
     },
     { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
+    { 'title': "ScummVM", 'type': COMMAND, 'command': 'scummvm' },
     { 'title': "Tools", 'type': MENU, 'subtitle': myip,
     'options': [
       { 'title': "Install PIP (http://pip.sheacob.com/about.html)", 'type': COMMAND, 'command': 'sudo /home/pi/pimame_files/pipinstall.py' },
