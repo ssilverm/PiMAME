@@ -195,3 +195,4 @@ type "RPG"
 type "Shot 'em Up"
 type "Sport"
 emulator_attrib "snes" missing exclude
+game "snes/Super Mario World" "" "" 24 0 ""
