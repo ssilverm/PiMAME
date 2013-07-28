@@ -42,6 +42,7 @@ menu_data = {
       { 'title': "AdvanceMAME", 'type': COMMAND, 'command': 'advmenu' },
       { 'title': "Neo Geo (GNGeo)", 'type': COMMAND, 'command': 'gngeo -i roms/' },
       { 'title': "MAME4All", 'type': COMMAND, 'command': '/home/pi/emulators/mame4all-pi/mame' },
+      { 'title': "FBA (CPS1, CPS2, Neo Geo)", 'type': COMMAND, 'command': '/home/pi/emulators/fba/fbacpex' },
      ]
     },
     { 'title': "Consoles", 'type': MENU, 'subtitle': "Console Emulators",
@@ -51,6 +52,7 @@ menu_data = {
       { 'title': "Gameboy (Gearboy Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-gameboy.rc' },
       { 'title': "Gameboy Advance (gpsp)", 'type': COMMAND, 'command': '/home/pi/emulators/gpsp/gpsp' },
       { 'title': "Atari 2600 (Stella)", 'type': COMMAND, 'command': 'stella' },
+      { 'title': "Commodore 64 (VICE)", 'type': COMMAND, 'command': 'x64' },
      ]
     },
     { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
