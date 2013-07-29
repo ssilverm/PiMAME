@@ -35,14 +35,14 @@ COMMAND = "command"
 
 
 menu_data = {
-  'title': "PiMAME Menu", 'type': MENU, 'subtitle':  "Please select an option...",
+  'title': "PiMAME Menu (v0.7.7)", 'type': MENU, 'subtitle':  "Please select an option...",
   'options': [
     { 'title': "Arcade", 'type': MENU, 'subtitle': "Arcade Emulators",
     'options': [
       { 'title': "AdvanceMAME", 'type': COMMAND, 'command': 'advmenu' },
       { 'title': "Neo Geo (GNGeo)", 'type': COMMAND, 'command': 'gngeo -i roms/' },
       { 'title': "MAME4All", 'type': COMMAND, 'command': '/home/pi/emulators/mame4all-pi/mame' },
-      { 'title': "FBA (CPS1, CPS2, Neo Geo)", 'type': COMMAND, 'command': '/home/pi/emulators/fba/fbacpex' },
+      { 'title': "FBA (CPS1, CPS2, Neo Geo)", 'type': COMMAND, 'command': '/home/pi/emulators/fba/fbacapex' },
      ]
     },
     { 'title': "Consoles", 'type': MENU, 'subtitle': "Console Emulators",
