@@ -35,7 +35,7 @@ COMMAND = "command"
 
 
 menu_data = {
-  'title': "PiMAME Menu (v0.7.7)", 'type': MENU, 'subtitle':  "Please select an option...",
+  'title': "PiMAME Menu (v0.7.8)", 'type': MENU, 'subtitle':  "Please select an option...",
   'options': [
     { 'title': "Arcade", 'type': MENU, 'subtitle': "Arcade Emulators",
     'options': [
@@ -49,6 +49,7 @@ menu_data = {
     'options': [
       { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
       { 'title': "SNES (PiSNES / SNES9x Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-snes.rc' },
+      { 'title': "NES (AdvanceMESS)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-nes.rc' },
       { 'title': "Gameboy (Gearboy Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-gameboy.rc' },
       { 'title': "Gameboy Advance (gpsp)", 'type': COMMAND, 'command': '/home/pi/emulators/gpsp/gpsp' },
       { 'title': "Atari 2600 (Stella)", 'type': COMMAND, 'command': 'stella' },
