@@ -48,6 +48,7 @@ menu_data = {
     { 'title': "Consoles", 'type': MENU, 'subtitle': "Console Emulators",
     'options': [
       { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
+      { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
       { 'title': "SNES (PiSNES / SNES9x Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-snes.rc' },
       { 'title': "NES (AdvanceMESS)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-nes.rc' },
       { 'title': "Gameboy (Gearboy Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-gameboy.rc' },
