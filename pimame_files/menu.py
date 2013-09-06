@@ -35,7 +35,7 @@ COMMAND = "command"
 
 
 menu_data = {
-  'title': "PiMAME Menu (v0.7.8)", 'type': MENU, 'subtitle':  "Please select an option...",
+  'title': "PiMAME Menu (v0.7.9)", 'type': MENU, 'subtitle':  "Please select an option...",
   'options': [
     { 'title': "Arcade", 'type': MENU, 'subtitle': "Arcade Emulators",
     'options': [
