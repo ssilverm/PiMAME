@@ -59,7 +59,7 @@ menu_data = {
       { 'title': "Genesis (DGen)", 'type': COMMAND,
          'command': 'advmenu -cfg advmenu-dgen.rc' },
       { 'title': "SNES (PiSNES / SNES9x Advmenu)", 'type': COMMAND, 
-         'command': '/home/pi/emulators/pisnes/snes9x.gui' },
+         'command': 'zsnes' },
       { 'title': "NES (AdvanceMESS)", 'type': COMMAND,
          'command': 'advmenu -cfg advmenu-nes.rc' },
       { 'title': "Gameboy (Gearboy Advmenu)", 'type': COMMAND,
@@ -178,7 +178,7 @@ def process_menu(menu, parent=None):
         game = subprocess.Popen(menu['options'][getin]['command'].split(),
                             stderr = subprocess.PIPE, stdout = subprocess.PIPE)
         pid = game.pid
-      except: continue
+      except: pass
       #threading.Thread(target=kill_emu(pid)).start()
     elif menu['options'][getin]['type'] == MENU:
       process_menu(menu['options'][getin], menu) # display the submenu
