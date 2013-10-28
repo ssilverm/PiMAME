@@ -55,6 +55,7 @@ menu_data = {
       { 'title': "Gameboy Advance (gpsp)", 'type': COMMAND, 'command': '/home/pi/emulators/gpsp/gpsp' },
       { 'title': "Atari 2600 (Stella)", 'type': COMMAND, 'command': 'stella' },
       { 'title': "Commodore 64 (VICE)", 'type': COMMAND, 'command': 'x64' },
+      { 'title': "N64 WARNING ALPHA!", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mupen.rc'},
      ]
     },
     { 'title': "CaveStory (NXEngine)", 'type': COMMAND, 'command': '/home/pi/emulators/cs.sh' },
