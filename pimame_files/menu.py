@@ -35,7 +35,7 @@ COMMAND = "command"
 
 
 menu_data = {
-  'title': "PiMAME Menu (v0.7.9)", 'type': MENU, 'subtitle':  "Please select an option...",
+  'title': "PiMAME Menu (v0.7.10)", 'type': MENU, 'subtitle':  "Please select an option...",
   'options': [
     { 'title': "Arcade", 'type': MENU, 'subtitle': "Arcade Emulators",
     'options': [
@@ -49,10 +49,15 @@ menu_data = {
     'options': [
       { 'title': "PlayStation 1 (PCSX_ReARMed)", 'type': COMMAND, 'command': '/home/pi/emulators/pcsx_rearmed/pcsx' },
       { 'title': "Genesis (DGen)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-dgen.rc' },
-      { 'title': "SNES (PiSNES / SNES9x Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-snes.rc' },
-      { 'title': "NES (AdvanceMESS)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-nes.rc' },
-      { 'title': "Gameboy (Gearboy Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-gameboy.rc' },
-      { 'title': "Gameboy Advance (gpsp)", 'type': COMMAND, 'command': '/home/pi/emulators/gpsp/gpsp' },
+      { 'title': "Nintendo Emulators", 'type': MENU, 'subtitle': 'Nintendo Emulators',
+      'options': [
+          { 'title': "SNES (PiSNES / SNES9x Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-snes.rc' },
+          { 'title': "NES (AdvanceMESS)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-nes.rc' },
+          { 'title': "Gameboy (Gearboy Advmenu)", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-gameboy.rc' },
+          { 'title': "Gameboy Advance (gpsp)", 'type': COMMAND, 'command': '/home/pi/emulators/gpsp/gpsp' },
+          { 'title': "N64 WARNING ALPHA!", 'type': COMMAND, 'command': 'advmenu -cfg advmenu-mupen.rc'},
+        ]
+      },
       { 'title': "Atari 2600 (Stella)", 'type': COMMAND, 'command': 'stella' },
       { 'title': "Commodore 64 (VICE)", 'type': COMMAND, 'command': 'x64' },
      ]
