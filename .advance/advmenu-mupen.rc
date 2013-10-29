@@ -37,7 +37,7 @@ display_orientation
 display_restoreatexit yes
 display_restoreatgame yes
 display_size 1024
-emulator "mupen" generic "/home/pi/emulators/mupen/test/mupen64plus" "%p"
+emulator "mupen" generic "/home/pi/emulators/mupen64plus-rpi/test/mupen64plus" "%p"
 emulator_roms "mupen" "/home/pi/roms/n64"
 event_alpha yes
 event_assign up up or 8_pad
