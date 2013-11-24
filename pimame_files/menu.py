@@ -213,7 +213,7 @@ def runmenu(menu, parent):
       # finished updating screen
 
     x = screen.getch() # Gets user input
-    if x == ord('\n') or x == ord(' ') or x == ord('a'):
+    if x == ord('\n'):
       x = ord('c')
 
     # What is user input?
