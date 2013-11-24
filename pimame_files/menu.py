@@ -149,7 +149,7 @@ menu_data = {
   ]
 }
 
-def updown(increment, pos, optioncount):
+def scrollwindow(increment, pos, optioncount):
     global topLineNum
     newPos = pos + increment
 
@@ -169,7 +169,7 @@ def updown(increment, pos, optioncount):
 
 # This function displays the appropriate menu and returns the option selected
 def runmenu(menu, parent):
-
+  global topLineNum
   # work out what text to display as the last menu option
   if parent is None:
     lastoption = "Exit (Return to Command Line)"
@@ -185,7 +185,7 @@ def runmenu(menu, parent):
   # Loop until return key is pressed
 
 
-  while x !=ord(u'c'):
+  while x !=ord('c'):
     if pos != oldpos:
       oldpos = pos
 #       screen.erase()
@@ -217,28 +217,36 @@ def runmenu(menu, parent):
       x = ord('c')
 
     # What is user input?
-    if x >= ord(u'1') and len(str(optioncount+1)) == 1 and x <= ord(str(optioncount+1)):
-      pos = x - ord(u'0') - 1 # convert keypress back to a number, then subtract 1 to get index
+    if x >= ord('1') and len(str(optioncount+1)) == 1 and x <= ord(str(optioncount+1)):
+      pos = x - ord('0') - 1 # convert keypress back to a number, then subtract 1 to get index
     elif x == 258: # down arrow
-      updown(DOWN, pos, optioncount)
       if pos < optioncount:
+        scrollwindow(DOWN, pos, optioncount)
         pos += 1
-#       else: pos = 0
+      else:
+        pos = 0
+        topLineNum = 0
     elif x == 8: # down arrow
-      updown(DOWN, pos, optioncount)
       if pos < optioncount:
+        scrollwindow(DOWN, pos, optioncount)
         pos += 1
-#       else: pos = 0
+      else:
+        pos = 0
+        topLineNum = 0
     elif x == 259: # up arrow
-      updown(UP, pos, optioncount)
       if pos > 0:
+        scrollwindow(UP, pos, optioncount)
         pos += -1
-#       else: pos = optioncount
+      else:
+        pos = optioncount
+        topLineNum = max(optioncount - curses.LINES + OFFSET + 1, 0)
     elif x == 259: # up arrow
-      updown(UP, pos, optioncount)
       if pos > 0:
+        scrollwindow(UP, pos, optioncount)
         pos += -1
-#       else: pos = optioncount
+      else:
+        pos = optioncount
+        topLineNum = max(optioncount - curses.LINES + OFFSET + 1, 0)
     elif x == ord('z') or x == ord('x'):
       is_add = True
       if menu_data['options'][fav_idx] == menu:
@@ -250,7 +258,7 @@ def runmenu(menu, parent):
         break
       else:
         curses.flash()
-    elif x != ord(u'\n'):
+    elif x != ord('\n'):
       curses.flash()
 
   # return index of the selected item
