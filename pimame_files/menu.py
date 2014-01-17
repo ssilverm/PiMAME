@@ -6,6 +6,9 @@
 
 import subprocess
 import curses, os #curses is the interface for capturing key presses on the menu, os launches the files
+import pygame
+pygame.init()
+
 screen = curses.initscr() #initializes a new window for capturing key presses
 curses.noecho() # Disables automatic echoing of key presses (prevents program from input each key twice)
 curses.cbreak() # Disables line buffering (runs each key as it is pressed rather than waiting for the return key to pressed)
@@ -24,6 +27,12 @@ if ether != '':
 if myip != '':
   myip = "Your IP is: " + myip + " - "
 
+
+pygame.joystick.init()
+js_count = pygame.joystick.get_count()
+for i in range(js_count):
+  js = pygame.joystick.Joystick(i)
+  js.init()
 
 # Change this to use different colors when highlighting
 curses.init_pair(1,curses.COLOR_BLACK, curses.COLOR_WHITE) # Sets up color pair #1, it does black text with white background 
@@ -93,57 +102,84 @@ def runmenu(menu, parent):
   
   # Loop until return key is pressed
 
+  while True:
+    myKeyPress = None
 
-  while x !=ord('c'):
-    if pos != oldpos:
-      oldpos = pos
-      screen.clear() #clears previous screen on key press and updates display based on pos
-      screen.border(0)
-      screen.addstr(2,2, menu['title'], curses.A_STANDOUT) # Title for this menu
-      screen.addstr(4,2, menu['subtitle'], curses.A_BOLD) #Subtitle for this menu
+    for event in pygame.event.get():
+      if event.type == QUIT:
+        pygame.quit()
+        sys.exit()
+      elif event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_LEFT:
+          myKeyPress = 'left'
+        elif event.key == pygame.K_RIGHT:
+          myKeyPress = 'right'
+        elif event.key == pygame.K_UP:
+          myKeyPress = 'up'
+        elif event.key == pygame.K_DOWN:
+          myKeyPress = 'down'
+        elif event.key == pygame.K_RETURN:
+          myKeyPress = 'enter'
+      elif event.type == pygame.JOYAXISMOTION:
+        if event.dict['axis'] == 0 and event.dict['value'] < 0:
+          myKeyPress = 'left'
+        elif event.dict['axis'] == 0 and event.dict['value'] > 0:
+          myKeyPress = 'right'
+        elif event.dict['axis'] == 1 and event.dict['value'] < 0:
+          myKeyPress = 'up'
+        elif event.dict['axis'] == 1 and event.dict['value'] > 0:
+          myKeyPress = 'down'
 
-      # Display all the menu items, showing the 'pos' item highlighted
-      for index in range(optioncount):
+    while x !=ord('c'):
+      if pos != oldpos:
+        oldpos = pos
+        screen.clear() #clears previous screen on key press and updates display based on pos
+        screen.border(0)
+        screen.addstr(2,2, menu['title'], curses.A_STANDOUT) # Title for this menu
+        screen.addstr(4,2, menu['subtitle'], curses.A_BOLD) #Subtitle for this menu
+
+        # Display all the menu items, showing the 'pos' item highlighted
+        for index in range(optioncount):
+          textstyle = n
+          if pos==index:
+            textstyle = h
+          screen.addstr(5+index,4, "%d - %s" % (index+1, menu['options'][index]['title']), textstyle)
+        # Now display Exit/Return at bottom of menu
         textstyle = n
-        if pos==index:
+        if pos==optioncount:
           textstyle = h
-        screen.addstr(5+index,4, "%d - %s" % (index+1, menu['options'][index]['title']), textstyle)
-      # Now display Exit/Return at bottom of menu
-      textstyle = n
-      if pos==optioncount:
-        textstyle = h
-      screen.addstr(5+optioncount,4, "%d - %s" % (optioncount+1, lastoption), textstyle)
-      screen.refresh()
-      # finished updating screen
+        screen.addstr(5+optioncount,4, "%d - %s" % (optioncount+1, lastoption), textstyle)
+        screen.refresh()
+        # finished updating screen
 
-    x = screen.getch() # Gets user input
-    if x == ord('\n'):
-      x = ord('c')
+      x = screen.getch() # Gets user input
+      if x == ord('\n'):
+        x = ord('c')
 
-    # What is user input?
-    if x >= ord('1') and x <= ord(str(optioncount+1)):
-      pos = x - ord('0') - 1 # convert keypress back to a number, then subtract 1 to get index
-    elif x == 258: # down arrow
-      if pos < optioncount:
-        pos += 1
-      else: pos = 0
-    elif x == 8: # down arrow
-      if pos < optioncount:
-        pos += 1
-      else: pos = 0
-    elif x == 259: # up arrow
-      if pos > 0:
-        pos += -1
-      else: pos = optioncount
-    elif x == 259: # up arrow
-      if pos > 0:
-        pos += -1
-      else: pos = optioncount
-    elif x != ord('\n'):
-      curses.flash()
+      # What is user input?
+      if x >= ord('1') and x <= ord(str(optioncount+1)):
+        pos = x - ord('0') - 1 # convert keypress back to a number, then subtract 1 to get index
+      elif x == 258 or myKeyPress == 'down': # down arrow
+        if pos < optioncount:
+          pos += 1
+        else: pos = 0
+      elif x == 8 or myKeyPress == 'down': # down arrow
+        if pos < optioncount:
+          pos += 1
+        else: pos = 0
+      elif x == 259 or myKeyPress == 'up': # up arrow
+        if pos > 0:
+          pos += -1
+        else: pos = optioncount
+      elif x == 259 or myKeyPress == 'up': # up arrow
+        if pos > 0:
+          pos += -1
+        else: pos = optioncount
+      elif x != ord('\n'):
+        curses.flash()
 
-  # return index of the selected item
-  return pos
+    # return index of the selected item
+    return pos
 
 # This function calls showmenu and then acts on the selected item
 def processmenu(menu, parent=None):
