@@ -38,7 +38,7 @@ display_restoreatexit yes
 display_restoreatgame yes
 display_size 1024
 emulator "snes" generic "/home/pi/emulators/pisnes/snes9x" "%p"
-emulator_roms "snes" "/home/pi/roms/snes"
+emulator_roms "snes" "/home/pi/emulators/pisnes/roms"
 event_alpha yes
 event_assign up up or 8_pad
 event_assign down down or 2_pad
